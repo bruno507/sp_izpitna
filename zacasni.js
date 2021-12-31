@@ -51,3 +51,30 @@ function reset() {
     document.getElementById('pm').innerHTML = '';
     document.getElementById('pd').innerHTML = '';
 }
+function bmi1() {
+    let vis = document.getElementById('visina').value;
+    let tez = document.getElementById('teza').value;
+    let bmi = tez / (vis / 100)**2;
+    let opis;
+    let col;
+    if (bmi < 18.5) {
+        col = 'blue';
+        if (bmi < 16) { opis = " - Huda nedohranjenost";}
+        else if (bmi < 17) {opis = " - Zmerna nedohranjenost";}
+        else {opis = " - Blaga nedohranjenost";}
+    }
+    else if (bmi < 30) {
+        col = 'green';
+        if (bmi <25){opis = " - Normalna telesna teža";}
+        else {opis = " - Povišana telesna teža";}
+    }
+    else {
+        col = 'red';
+        if (bmi < 35){opis = " - Debelost I razred";}
+        else if (bmi < 40) {opis = " - Debelost II razred";}
+        else {opis = " - Debelost III razred";}
+    }
+
+    document.getElementById('bmi').innerHTML = bmi.toFixed(2)+opis;
+    document.getElementById('bmi').style.color = col;
+}
