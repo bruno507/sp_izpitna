@@ -64,7 +64,7 @@ function bmi1() {
         else {opis = " - Blaga nedohranjenost";}
     }
     else if (bmi < 30) {
-        col = 'green';
+        col = '#26E816';
         if (bmi <25){opis = " - Normalna telesna teža";}
         else {opis = " - Povišana telesna teža";}
     }
