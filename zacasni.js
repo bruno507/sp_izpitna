@@ -32,13 +32,13 @@ function delDoba() {
     if(yy>=0 && (yy>0 || mes>0 || dan>0)) {
         document.getElementById('ostalo').innerHTML = 'Do penzije vas še čaka ';
         if (yy>0) {
-            document.getElementById('py').innerHTML = yy.toString() + ' let';
+            document.getElementById('py').innerHTML = yy.toString() + ' L';
         }
         if (mes>0) {
-            document.getElementById('pm').innerHTML = mes.toString() + ' mesecev';
+            document.getElementById('pm').innerHTML = mes.toString() + ' M';
         }
         if (dan>0) {
-            document.getElementById('pd').innerHTML = dan.toString()+ ' dni';
+            document.getElementById('pd').innerHTML = dan.toString()+ ' D';
         }
     }
     else {
