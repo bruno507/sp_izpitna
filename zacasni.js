@@ -74,7 +74,6 @@ function bmi1() {
         else if (bmi < 40) {opis = " - Debelost II razred";}
         else {opis = " - Debelost III razred";}
     }
-
     document.getElementById('bmi').innerHTML = bmi.toFixed(2)+opis;
     document.getElementById('bmi').style.color = col;
 }
