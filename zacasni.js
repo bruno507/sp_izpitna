@@ -44,7 +44,7 @@ function delDoba() {
     else {
         document.getElementById('ostalo').innerHTML = 'Pogoji za penzijo so izpolnjeni!';
     }
-    document.getElementById("rez").style.display = "initial";
+    document.getElementById("rez").style.display = "inline-table";
 }
 function reset() {
     document.getElementById('py').innerHTML = '';
