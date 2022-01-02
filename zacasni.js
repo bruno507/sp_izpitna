@@ -30,15 +30,15 @@ function delDoba() {
     }
     let yy = konec.getFullYear()- danes.getFullYear();
     if(yy>=0 && (yy>0 || mes>0 || dan>0)) {
-        document.getElementById('ostalo').innerHTML = 'Do penzije vas še čaka ';
+        document.getElementById('ostalo').innerHTML = 'Do penzije vas še čaka';
         if (yy>0) {
-            document.getElementById('py').innerHTML = yy.toString() + ' L';
+            document.getElementById('py').innerHTML = yy.toString() + 'L';
         }
         if (mes>0) {
-            document.getElementById('pm').innerHTML = mes.toString() + ' M';
+            document.getElementById('pm').innerHTML = ' ' + mes.toString() + 'M';
         }
         if (dan>0) {
-            document.getElementById('pd').innerHTML = dan.toString()+ ' D';
+            document.getElementById('pd').innerHTML = ' ' + dan.toString()+ 'D';
         }
     }
     else {
