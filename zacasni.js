@@ -29,7 +29,7 @@ function delDoba() {
         danes.setFullYear(danes.getFullYear()+2);
     }
     let yy = konec.getFullYear()- danes.getFullYear();
-    if(yy>=0) {
+    if(yy>=0 && (yy>0 || mes>0 || dan>0)) {
         document.getElementById('ostalo').innerHTML = 'Do penzije vas še čaka ';
         if (yy>0) {
             document.getElementById('py').innerHTML = yy.toString() + ' let';
