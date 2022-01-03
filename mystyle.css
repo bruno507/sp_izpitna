@@ -51,9 +51,15 @@ input[type=radio] {
     width: auto;
     margin: 0.2em 0.1em 0;
 }
+input[type=date] {
+    width: auto;
+}
 .linija {
     display: inline-table;
 }
 h2 {
     text-align: center;
+}
+#rez {
+    margin-left: 2em;
 }

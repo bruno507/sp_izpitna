@@ -32,7 +32,7 @@ function delDoba() {
     if(yy>=0 && (yy>0 || mes>0 || dan>0)) {
         document.getElementById('ostalo').innerHTML = 'Do penzije vas še čaka';
         if (yy>0) {
-            document.getElementById('py').innerHTML = yy.toString() + 'L';
+            document.getElementById('py').innerHTML = ' ' + yy.toString() + 'L';
         }
         if (mes>0) {
             document.getElementById('pm').innerHTML = ' ' + mes.toString() + 'M';
@@ -42,7 +42,7 @@ function delDoba() {
         }
     }
     else {
-        document.getElementById('ostalo').innerHTML = 'Pogoji za penzijo so izpolnjeni!';
+        document.getElementById('ostalo').innerHTML = 'Pogoji za penzijo so izpolnjeni';
     }
     document.getElementById("rez").style.display = "inline-table";
 }
