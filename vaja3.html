@@ -1,71 +1,61 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="sl" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>Izračun indeksa telesne mase</title>
-   
-
+    <title>Izračun ITM in delovne dobe</title>
     <script src="zacasni.js"></script>
-    <link rel="stylesheet" href="mystyle.css?version=3">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
+    <link href="mystyle.css?version=8" rel="stylesheet">
 </head>
 <body>
-    <div class="row">
-        <h2>Vnos uporabnika in izračun podatkov</h2>
-        <p>Prosim vnesite svoje osebne podatke</p>
-        <div class="col-md-3" id="obrazec">
-            <form class="position background center" onsubmit="delDoba(); bmi1(); return false;">
-                <div class="form-group">
-                    <label for="ime">Ime</label>
-                    <input required type="text" class="form-control" id="ime" autocomplete="off" placeholder="Vnesite svoje osebno ime">
-                    <label for="ime2">Priimek</label>
-                    <input required class="form-control" id="ime2" autocomplete="off" placeholder="Vnesite priimek">
-                    <input required type="radio" id="m" name="spol" value=45>
-                    <label for="m">Moški</label>
-                    <input type="radio" id="f" name="spol" value=40>
-                    <label for="f">Ženska</label> <br>
-                    <label for="visina">Telesna višina</label>
-                    <input required type="number" class="form-control" id="visina" placeholder="cm">
-                    <label for="teza">Telesna teža</label>
-                    <input required type="number" step=".1" class="form-control" id="teza" placeholder="kg">
-                    <label for="dob">Datum rojstva</label>
-                    <input required type="date" class="form-control cursor" id="dob">
-                    <label for="job">Datum prve zaposlitve</label>
-                    <input required type="date" class="form-control" id="job">
-                </div>
-
-                <br>
-                <input type="submit" class="btn btn-dark" id="izracun" value="IZRAČUN">
-              </form>
-        </div>
-
-        <div class="col-md-3" id="hvala" hidden>
-            <div class="popup">
-            <img src="testni.png" width="100px" height="100px" alt="">   
-             <br>
-               .....
-                <input type="" class="btn btn-dark" id="done" value="DONE" onclick="done();">
-            </div>
-        </div>
-        
-        <div class="col-md-5" id="rez">
-            <h2>Izračun podatkov</h2>
-            <p>Vaš indeks telesne mase je <span id="bmi"></span>
-            <p>Imate že <span id="dobaaa"></span> let delovne dobe.
-                <span id="ostalo"></span> <span id="py"></span>
-                <span id="pm"></span>
-                <span id="pd"></span>
-
-            <span id="penzi"></span>
-            <hr><br>
-            <div class="row left" id="info" hidden>
-                <p>Spoštovani <span id='imeSpan'></span> <span id='priimekSpan'></span></p> 
-                <p>Na podlagi podatkov, ki ste jih vpisali ugotavljamo, da znaša vaš indeks telesne mase: </p>
-                <p>.....</p>
-                <p>Za seboj imate že ....let delovne dobe in do upokojitve vas čaka še..... let, ..... mesecev in ..... dni dela.</p>
-            </div>
-        </div>
+<form class="position background linija" onsubmit="delDoba(); bmi1(); return false;">
+    <h2>ITM, delovna doba kalkulator</h2>
+    <hr>
+    <div class="left">
+        <label for="ime">Ime</label>
+        <input autocomplete="off" id="ime" required>
     </div>
+    <div class="right">
+        <label for="ime2">Priimek</label>
+        <input autocomplete="off" id="ime2" required>
+    </div>
+    <span class="blok">Spol:</span>
+    <div class="left">
+        <input id="m" name="spol" required type="radio" value=45>
+        <label class="rlab" for="m">Moški</label>
+        <label for="visina">Višina</label>
+        <input id="visina" placeholder="cm" required type="number">
+        <label for="dob">Datum rojstva</label>
+        <input id="dob" required type="date">
+    </div>
+    <div class="right">
+        <input id="f" name="spol" type="radio" value=40>
+        <label class="rlab" for="f">Ženska</label>
+        <label for="teza">Teža</label>
+        <input id="teza" placeholder="kg" required step=".1" type="number">
+        <label for="job">Datum 1. zaposlitve</label>
+        <input id="job" required type="date">
+    </div>
+    <input class="btn btn-dark" id="izracun" type="submit" value="IZRAČUN">
+</form>
+
+
+<div class="col-md-3" hidden id="hvala">
+    <div class="popup">
+        <img alt="" src="testni.png">
+
+
+    </div>
+</div>
+
+<div hidden id="rez">
+    <h2>Izračun podatkov</h2>
+    <hr>
+    <p>Vaš indeks telesne mase je <span id="bmi"></span>
+    <p>Imate že <span id="dobaaa"></span> let delovne dobe.
+        <span id="ostalo"></span>
+        <span id="py"></span><span id="pm"></span><span id="pd"></span>.
+
+</div>
+
 </body>
 </html>
 

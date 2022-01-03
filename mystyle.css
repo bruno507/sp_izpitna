@@ -1,40 +1,59 @@
 body {
-
+    font-size: 1.5em;
 }
-
 .cursor:hover {
     cursor: pointer;
 }
-
 .position {
-    padding-left: 30px;
-
-    padding-bottom: 30px;
+    padding: 0 30px 30px;
+    width: 20em;
 }
-
 .background {
     background-color: rgb(218, 218, 218);
-
     border-radius: 5px;
-
 }
-
 .center {
     margin-left: auto;  
     margin-right: auto;
 }
-
 .popup {
     padding: 50px 0;
-
     text-align: center;
-   
 }
-
 .left {
-    padding-left: 30px;
+    float: left;
+    width: 50%;
 }
-
-#rez {
-    display: none;
+.right {
+    float: right;
+    width: 50%;
+}
+label, input, .blok {
+    display: block;
+}
+label, .blok {
+    padding-bottom: 0.5em;
+}
+input {
+    font-size: inherit;
+    padding: 0.1em;
+    margin-bottom: 1em;
+    text-transform: capitalize;
+    width: 75%;
+}
+.rlab {
+    display: inline-block;
+    padding-bottom: 1em;
+    font-size: 0.93em;
+}
+input[type=radio] {
+    display: inline;
+    width: auto;
+    margin: 0.2em 0.1em 0;
+}
+.linija {
+    display: inline-table;
+}
+h2 {
+    text-align: center;
 }
