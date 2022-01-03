@@ -59,20 +59,20 @@ function bmi1() {
     let col;
     if (bmi < 18.5) {
         col = 'blue';
-        if (bmi < 16) { opis = " - Huda nedohranjenost";}
-        else if (bmi < 17) {opis = " - Zmerna nedohranjenost";}
-        else {opis = " - Blaga nedohranjenost";}
+        if (bmi < 16) { opis = " - Huda nedohranjenost.";}
+        else if (bmi < 17) {opis = " - Zmerna nedohranjenost.";}
+        else {opis = " - Blaga nedohranjenost.";}
     }
     else if (bmi < 30) {
         col = '#26E816';
-        if (bmi <25){opis = " - Normalna telesna teža";}
-        else {opis = " - Povišana telesna teža";}
+        if (bmi <25){opis = " - Normalna telesna teža.";}
+        else {opis = " - Povišana telesna teža.";}
     }
     else {
         col = 'red';
-        if (bmi < 35){opis = " - Debelost I razred";}
-        else if (bmi < 40) {opis = " - Debelost II razred";}
-        else {opis = " - Debelost III razred";}
+        if (bmi < 35){opis = " - Debelost I razred.";}
+        else if (bmi < 40) {opis = " - Debelost II razred.";}
+        else {opis = " - Debelost III razred.";}
     }
     document.getElementById('bmi').innerHTML = bmi.toFixed(2)+opis;
     document.getElementById('bmi').style.color = col;
