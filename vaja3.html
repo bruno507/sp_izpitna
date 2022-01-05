@@ -3,7 +3,8 @@
 <head>
     <title>Izračun ITM in delovne dobe</title>
     <script src="zacasni.js"></script>
-    <link href="mystyle.css?version=8" rel="stylesheet">
+    <link href="mystyle.css?version=9" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <form class="position background linija" onsubmit="delDoba(); bmi1(); return false;">
@@ -17,7 +18,7 @@
         <label for="ime2">Priimek</label>
         <input autocomplete="off" id="ime2" required>
     </div>
-    <span class="blok">Spol:</span>
+    <span class="blok">Spol</span>
     <div class="left">
         <input id="m" name="spol" required type="radio" value=45>
         <label class="rlab" for="m">Moški</label>
@@ -34,10 +35,8 @@
         <label for="job">Datum 1. zaposlitve</label>
         <input id="job" required type="date">
     </div>
-    <input class="btn btn-dark" id="izracun" type="submit" value="IZRAČUN">
+    <input class="center" id="izracun" type="submit" value="izračun">
 </form>
-
-
 <div class="col-md-3" hidden id="hvala">
     <div class="popup">
         <img alt="" src="testni.png">
@@ -52,9 +51,7 @@
     <p>Vaš indeks telesne mase je <span id="bmi"></span>
     <p>Imate že <span id="dobaaa"></span> let delovne dobe.
         <span id="ostalo"></span><span id="py"></span><span id="pm"></span><span id="pd"></span>.
-
 </div>
 
 </body>
 </html>
-
