@@ -1,6 +1,7 @@
 function delDoba() {
     reset();
     const jobdate = new Date(document.getElementById('job').value);
+    jobdate.setHours(0,0,0,0);
     const leta = parseInt(document.querySelector('input[name="spol"]:checked').value);
     const danes = new Date();
     danes.setHours(0,0,0,0);
@@ -30,7 +31,7 @@ function delDoba() {
     }
     let yy = konec.getFullYear()- danes.getFullYear();
     if(yy>=0 && (yy>0 || mes>0 || dan>0)) {
-        document.getElementById('ostalo').innerHTML = 'Do penzije vas še čaka';
+        document.getElementById('ostalo').innerHTML = 'Do upokojitve vas še čaka';
         if (yy>0) {
             document.getElementById('py').innerHTML = ' ' + yy.toString() + 'L';
         }
@@ -42,7 +43,7 @@ function delDoba() {
         }
     }
     else {
-        document.getElementById('ostalo').innerHTML = 'Pogoji za penzijo so izpolnjeni';
+        document.getElementById('ostalo').innerHTML = 'Pogoji za upokojitev so izpolnjeni';
     }
     document.getElementById("rez").style.display = "inline-table";
 }
