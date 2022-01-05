@@ -54,6 +54,13 @@ input[type=radio] {
 input[type=date] {
     width: auto;
 }
+input[type=number] {
+    width: 4em;
+}
+input[type=submit] {
+    width: 50%;
+    font-weight: bold;
+}
 .linija {
     display: inline-table;
 }
@@ -62,4 +69,16 @@ h2 {
 }
 #rez {
     margin-left: 2em;
+}
+@media only screen and (max-width:600px) {
+    .position {
+        width: auto;
+        margin: auto;
+    }
+    #rez {
+        margin: auto;
+    }
+    #ostalo {
+        display: inline-block;
+    }
 }
