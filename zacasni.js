@@ -46,6 +46,7 @@ function delDoba() {
         document.getElementById('ostalo').innerHTML = 'Pogoji za upokojitev so izpolnjeni';
     }
     document.getElementById("rez").style.display = "inline-table";
+    document.getElementById("good").style.display = "initial";
 }
 function reset() {
     document.getElementById('py').innerHTML = '';

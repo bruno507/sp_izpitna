@@ -60,6 +60,8 @@ input[type=number] {
 input[type=submit] {
     width: 50%;
     font-weight: bold;
+    margin-left: 20%;
+    display: inline;
 }
 .linija {
     display: inline-table;
@@ -69,6 +71,9 @@ h2 {
 }
 #rez {
     margin-left: 2em;
+}
+img {
+    float: right;
 }
 @media only screen and (max-width:600px) {
     .position {
