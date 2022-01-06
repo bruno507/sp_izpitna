@@ -3,20 +3,21 @@
 <head>
     <title>Izračun ITM in delovne dobe</title>
     <script src="zacasni.js"></script>
-    <link href="mystyle.css?version=9" rel="stylesheet">
+    <link href="mystyle.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<form class="position background linija" onsubmit="delDoba(); bmi1(); return false;">
+
+<form class="position" onsubmit="delDoba(); bmi1(); return false;">
     <h2>ITM, delovna doba kalkulator</h2>
     <hr>
     <div class="left">
         <label for="ime">Ime</label>
-        <input autocomplete="off" id="ime" required>
+        <input type="text" autocomplete="off" id="ime" required>
     </div>
     <div class="right">
         <label for="ime2">Priimek</label>
-        <input autocomplete="off" id="ime2" required>
+        <input type="text" autocomplete="off" id="ime2" required>
     </div>
     <span class="blok">Spol</span>
     <div class="left">
@@ -35,11 +36,9 @@
         <label for="job">Datum 1. zaposlitve</label>
         <input id="job" required type="date">
     </div>
-    <input id="izracun" type="submit" value="izračun">
+    <input id="izracun" type="submit" value="Izračun">
     <img hidden id="good" alt="" src="testni.png">
 </form>
-
-
 
 <div hidden id="rez">
     <h2>Izračun podatkov</h2>

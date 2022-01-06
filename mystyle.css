@@ -1,89 +1,92 @@
 body {
     font-size: 1.5em;
 }
-.cursor:hover {
-    cursor: pointer;
-}
+
 .position {
     padding: 0 30px 30px;
-    width: 20em;
-}
-.background {
     background-color: rgb(218, 218, 218);
-    border-radius: 5px;
+    border-radius: 50px;
+    display: inline-table;
 }
+
 .center {
-    margin-left: auto;  
+    margin-left: auto;
     margin-right: auto;
 }
-.popup {
-    padding: 50px 0;
-    text-align: center;
-}
+
 .left {
     float: left;
     width: 50%;
 }
+
 .right {
     float: right;
     width: 50%;
 }
+
 label, input, .blok {
     display: block;
 }
+
 label, .blok {
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
+
 input {
     font-size: inherit;
     padding: 0.1em;
     margin-bottom: 1em;
-    text-transform: capitalize;
-    width: 75%;
 }
+
 .rlab {
     display: inline-block;
-    padding-bottom: 1em;
+    margin-bottom: 1em;
     font-size: 0.93em;
 }
+
+input[type=text] {
+    width: 7em;
+    text-transform: capitalize;
+}
+
 input[type=radio] {
     display: inline;
-    width: auto;
     margin: 0.2em 0.1em 0;
 }
-input[type=date] {
-    width: auto;
-}
+
 input[type=number] {
     width: 4em;
 }
+
 input[type=submit] {
     width: 50%;
     font-weight: bold;
-    margin-left: 20%;
+    margin: 1em 0 0 20%;
     display: inline;
 }
-.linija {
-    display: inline-table;
-}
+
 h2 {
     text-align: center;
 }
+
 #rez {
     margin-left: 2em;
 }
-img {
+
+#good {
     float: right;
 }
-@media only screen and (max-width:600px) {
-    .position {
-        width: auto;
-        margin: auto;
-    }
+
+@media only screen and (max-width: 600px) {
     #rez {
         margin: auto;
     }
+
     #ostalo {
         display: inline-block;
+    }
+
+    input[type=text], input[type=date] {
+        width: 5em;
     }
 }
